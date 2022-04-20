@@ -15,7 +15,7 @@ class ContentController extends Controller
     public function index()
     {
         $contentCategory=ContentCategory::all();
-        return view('site.contentcategory',['contentCategory'=>$contentCategory]);
+        return view('site.categori');
     }
 
     private function imageExtCheck($img)

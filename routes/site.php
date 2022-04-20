@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('site')->middleware(['auth','isSite'])->group(function(){
-    Route::get('/',function(){
-        return "welcome site";
-    });
+    Route::get('/',[\App\Http\Controllers\site\HomeController::class,'index'])->name('site.index');
+    Route::get('/content',[\App\Http\Controllers\site\ContentController::class,'index'])->name('site.content');
 });

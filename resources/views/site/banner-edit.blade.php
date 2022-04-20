@@ -1,6 +1,4 @@
-<?php
-include '../sections/header.php'
-?>
+@include('site.layouts.header')
 <div class="container-fluid py-4">
     <div class="row">
         <div class="col-12">
@@ -13,7 +11,7 @@ include '../sections/header.php'
                         <div class="text-end col-md-6">
                             <a href="banner-add.php"><button type="button" class="btn btn-primary btn-sm">Banner
                                     Ekle</button></a>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -25,7 +23,7 @@ include '../sections/header.php'
                                 <select class="form-control" id="exampleFormControlSelect1">
                                     <option>Türkçe</option>
                                     <option>İngilizce</option>
-                                   
+
                                 </select>
                             </div>
                             <div class="form-group">

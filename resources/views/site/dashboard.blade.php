@@ -1,6 +1,4 @@
-<?php
-include '../sections/header.php'
-?>
+@include('site.layouts.header')
     <div class="container-fluid py-4">
       <div class="row">
         <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">

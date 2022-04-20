@@ -1,6 +1,4 @@
-<?php
-include '../sections/header.php'
-?>
+@include('site.layouts.header')
 <div class="container-fluid py-4">
     <div class="row">
         <div class="col-12">
@@ -12,7 +10,7 @@ include '../sections/header.php'
                         </div>
                         <div class="text-end col-md-6">
                         <a href="languages-add.php"><button type="button" class="btn btn-primary btn-sm">Dil Ekle</button></a>
-            <a href="language-constants.php"><button type="button" class="btn btn-secondary btn-sm">Dil Sabitleri</button></a>  
+            <a href="language-constants.php"><button type="button" class="btn btn-secondary btn-sm">Dil Sabitleri</button></a>
                         </div>
                     </div>
                 </div>
@@ -45,7 +43,7 @@ include '../sections/header.php'
 
                                 </div>
                             </div>
-                         
+
                             <div class="form-group">
                                 <label for="example-text-input" class="form-control-label">Sıra</label>
                                 <input class="form-control" type="number" value="1" id="example-text-input">

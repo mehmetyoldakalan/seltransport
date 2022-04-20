@@ -1,6 +1,4 @@
-<?php
-include '../sections/header.php'
-?>
+@include('site.layouts.header')
 <div class="container-fluid py-4">
     <div class="row">
         <div class="col-12">
@@ -10,7 +8,7 @@ include '../sections/header.php'
                         <div class="col-md-6 text-start">
                             <h6>Dil Sabitleri</h6>
                         </div>
-                       
+
                     </div>
                 </div>
                 <div class="card card-body">
@@ -24,10 +22,10 @@ include '../sections/header.php'
                                 <label for="example-number-input" class="form-control-label">Sıra</label>
                                 <input class="form-control" type="number" value="TR" id="example-number-input">
                             </div>
-                          
-                          
-                           
-                          
+
+
+
+
                            <div class="text-end">
                            <a href="#"><button type="button" class="btn btn-primary btn-sm">Sabit Ekle</button></a>
                            </div>

@@ -1,6 +1,4 @@
-<?php
-include '../sections/header.php'
-?>
+@include('site.layouts.header')
 <div class="container-fluid py-4">
     <div class="row">
         <div class="col-12">
@@ -10,7 +8,7 @@ include '../sections/header.php'
                         <div class="col-md-6 text-start">
                             <h6>Kategori Düzenle</h6>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="card card-body">
@@ -28,7 +26,7 @@ include '../sections/header.php'
                                 <label for="example-text-input" class="form-control-label">Başlık</label>
                                 <input class="form-control" type="text" value="Başlık" id="example-text-input">
                             </div>
-                           
+
 
                             <div class="form-group">
                                 <label for="example-file-input" class="form-control-label">Üst Resim</label>
@@ -46,13 +44,13 @@ include '../sections/header.php'
                                 <label for="exampleFormControlTextarea1">İçerik</label>
                                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
                             </div>
-                          
+
                             <div class="form-group">
                                     <label for="example-file-input" class="form-control-label">Ana Resim</label>
                                     <input class="form-control" type="file" value="" id="example-file-input">
                                 </div>
-                               
-                                
+
+
                                 <div class="form-group">
                                     <label for="example-text-input" class="form-control-label">Keywords</label>
                                     <input class="form-control" type="text" value="" id="example-text-input">
@@ -65,15 +63,15 @@ include '../sections/header.php'
                                     <label for="example-text-input" class="form-control-label">Etiket</label>
                                     <input class="form-control" type="text" value="" id="example-text-input">
                                 </div>
-                               
-                               
+
+
                                 <div class="form-group">
                                     <label for="example-url-input" class="form-control-label">SEO Url</label>
                                     <input class="form-control" type="url" value="" id="example-url-input">
                                 </div>
-                                
+
                             </div>
-                                
+
                     </div>
 
 

@@ -1,6 +1,4 @@
-<?php
-include '../sections/header.php'
-?>
+@include('site.layouts.header')
 <!-- End Navbar -->
 <div class="container-fluid py-4">
     <div class="row">

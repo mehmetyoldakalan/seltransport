@@ -1,6 +1,5 @@
-<?php
-include '../sections/header.php'
-?>
+@include('site.layouts.header')
+
 <div class="container-fluid py-4">
     <div class="row">
         <div class="col-12">
@@ -13,7 +12,7 @@ include '../sections/header.php'
                         <div class="text-end col-md-6">
                             <a href="categori-add.php"><button type="button" class="btn btn-primary btn-sm">Yeni Kategori
                                     Ekle</button></a>
-                           
+
                         </div>
                     </div>
 

@@ -1,6 +1,4 @@
-<?php
-include '../sections/header.php'
-?>
+@include('site.layouts.header')
 <div class="container-fluid py-4">
     <div class="row">
         <div class="col-12">
@@ -10,7 +8,7 @@ include '../sections/header.php'
                         <div class="col-md-6 text-start">
                             <h6>İçerik Ekle</h6>
                         </div>
-                        
+
                     </div>
                 </div>
                 <div class="card card-body">
@@ -105,9 +103,9 @@ include '../sections/header.php'
                                     <label for="example-url-input" class="form-control-label">SEO Url</label>
                                     <input class="form-control" type="url" value="" id="example-url-input">
                                 </div>
-                                
+
                             </div>
-                                
+
                     </div>
 
 
