@@ -1,5 +1,4 @@
 @include('site.layouts.header')
-        <!-- End Navbar -->
         <div class="container-fluid py-4">
             <div class="row">
                 <div class="col-lg-3">
@@ -158,58 +157,59 @@
                         </ul>
                     </div>
                 </div>
+
+                <form action="{{route('site.settings_update')}}" method="post">
                 <div class="col-lg-9 mt-lg-0 mt-4">
 
                     <div class="card card-body" id="genel-ayarlar">
                         <div class="row justify-content-center align-items-center">
 
 
-                            <form>
                                 <h5>Genel Ayarlar</h5>
                                 <div class="form-group">
                                     <label for="example-text-input" class="form-control-label">Firma</label>
-                                    <input class="form-control" type="text" value="LaraSoft" id="example-text-input">
+                                    <input class="form-control" type="text" name="facility_name" value="{{$settingsData->facility_name}}" id="example-text-input">
                                 </div>
                                 <div class="form-group">
                                     <label for="example-text-input" class="form-control-label">Slogan</label>
-                                    <input class="form-control" type="search" value="Slogan Alanı"
+                                    <input class="form-control" type="search" value="{{$settingsData->facility_slogan}}"
                                         id="example-text-input">
                                 </div>
                                 <div class="form-group">
                                     <label for="example-text-input" class="form-control-label">Site Title</label>
-                                    <input class="form-control" type="email" value="LaraSoft" id="example-text-input">
+                                    <input class="form-control" type="email" value="{{$settingsData->title}}" id="example-text-input">
                                 </div>
                                 <div class="form-group">
                                     <label for="example-text-input" class="form-control-label">Description</label>
-                                    <input class="form-control" type="text" value="Description" id="example-text-input">
+                                    <input class="form-control" type="text" value="{{$settingsData->description}}" id="example-text-input">
                                 </div>
                                 <div class="form-group">
                                     <label for="example-text-input" class="form-control-label">Keywords</label>
-                                    <input class="form-control" type="text" value="yazılım, bilişim"
+                                    <input class="form-control" type="text" value="{{$settingsData->keywords}}"
                                         id="example-text-input">
                                 </div>
                                 <div class="form-group">
                                     <label for="example-url-input" class="form-control-label">Web Sitesi</label>
-                                    <input class="form-control" type="url" value="larasoft.com.tr"
+                                    <input class="form-control" type="url" value="{{$settingsData->site_url}}"
                                         id="example-url-input">
                                 </div>
                                 <div class="form-group">
                                     <label for="example-text-input" class="form-control-label">SMTP URL</label>
-                                    <input class="form-control" type="text" value="localhost" id="example-text-input">
+                                    <input class="form-control" type="text" value="{{$settingsData->smtp_url}}" id="example-text-input">
                                 </div>
                                 <div class="form-group">
                                     <label for="example-text-input" class="form-control-label">SMTP Mail</label>
-                                    <input class="form-control" type="text" value="info@larasoft.com"
+                                    <input class="form-control" type="text" value="{{$settingsData->smtp_mail}}"
                                         id="example-text-input">
                                 </div>
                                 <div class="form-group">
                                     <label for="example-password-input" class="form-control-label">SMTP Şifre</label>
-                                    <input class="form-control" type="password" value="21-03-2022"
+                                    <input class="form-control" type="password" value="{{$settingsData->smtp_password}}"
                                         id="example-password-input">
                                 </div>
                                 <div class="form-group">
                                     <label for="example-number-input" class="form-control-label">SMTP Port</label>
-                                    <input class="form-control" type="number" value="21" id="example-number-input">
+                                    <input class="form-control" type="number" value="{{$settingsData->smtp_port}}" id="example-number-input">
                                 </div>
                                 <div class="form-group">
                                     <label for="example-file-input" class="form-control-label">Logo</label>
@@ -223,7 +223,7 @@
                                     <label for="example-file-input" class="form-control-label">İcon</label>
                                     <input class="form-control" type="file" value="" id="example-file-input">
                                 </div>
-                            </form>
+
 
 
                         </div>
@@ -237,47 +237,41 @@
                             <div class="row justify-content-center align-items-center">
 
 
-                                <form>
 
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">Adres</label>
-                                        <input class="form-control" type="text" value="İstanbul - Kadıköy"
+                                        <input class="form-control" type="text" value="{{$settingsData->address1}}"
                                             id="example-text-input">
                                     </div>
                                     <div class="form-group">
                                         <label for="example-phone-input" class="form-control-label">Telefon</label>
-                                        <input class="form-control" type="phone" value="0212 417 91 77"
+                                        <input class="form-control" type="phone" value="{{$settingsData->number}}"
                                             id="example-phone-input">
                                     </div>
-                                    <div class="form-group">
-                                        <label for="example-phone-input" class="form-control-label">Cep Telefonu</label>
-                                        <input class="form-control" type="phone" value="0538 910 24 02"
-                                            id="example-phone-input">
-                                    </div>
+
                                     <div class="form-group">
                                         <label for="example-phone-input" class="form-control-label">Whatsapp</label>
-                                        <input class="form-control" type="phone" value="0538 910 24 02"
+                                        <input class="form-control" type="phone" value="{{$settingsData->whatsapp}}"
                                             id="example-phone-input">
                                     </div>
                                     <div class="form-group">
                                         <label for="example-phone-input" class="form-control-label">Faks</label>
-                                        <input class="form-control" type="phone" value="0212 417 91 77"
+                                        <input class="form-control" type="phone" value="{{$settingsData->fax}}"
                                             id="example-phone-input">
                                     </div>
                                     <div class="form-group">
                                         <label for="example-mail-input" class="form-control-label">Mail</label>
-                                        <input class="form-control" type="email" value="info@larasoft.com"
+                                        <input class="form-control" type="email" value="{{$settingsData->mail}}"
                                             id="example-mail-input">
                                     </div>
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">Google Map</label>
                                         <input class="form-control" type="text"
-                                            value='<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d24058.923674482765!2d28.714044!3d41.082861!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc5870f0de5c7cd1b!2sHayat%20Alfa%20Kozmetik!5e0!3m2!1str!2str!4v1622625898683!5m2!1str!2str" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>'
+                                            value='{{$settingsData->map}}'
                                             id="example-mail-input">
                                     </div>
 
 
-                                </form>
 
 
                             </div>
@@ -292,44 +286,41 @@
                             <div class="row justify-content-center align-items-center">
 
 
-                                <form>
-
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">Facebook</label>
-                                        <input class="form-control" type="text" value="facebook"
+                                        <input class="form-control" type="text" value="{{$settingsData->facebook}}"
                                             id="example-text-input">
                                     </div>
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">Twitter</label>
-                                        <input class="form-control" type="text" value="twitter" id="example-text-input">
+                                        <input class="form-control" type="text" value="{{$settingsData->twitter}}" id="example-text-input">
                                     </div>
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">Instagram</label>
-                                        <input class="form-control" type="text" value="instagram"
+                                        <input class="form-control" type="text" value="{{$settingsData->instagram}}"
                                             id="example-text-input">
                                     </div>
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">Google +</label>
-                                        <input class="form-control" type="text" value="google+" id="example-text-input">
+                                        <input class="form-control" type="text" value="{{$settingsData->google}}" id="example-text-input">
                                     </div>
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">LinkedIn</label>
-                                        <input class="form-control" type="text" value="linkedin"
+                                        <input class="form-control" type="text" value="{{$settingsData->linkedin}}"
                                             id="example-text-input">
                                     </div>
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">Youtube</label>
-                                        <input class="form-control" type="text" value="youtube" id="example-text-input">
+                                        <input class="form-control" type="text" value="{{$settingsData->youtube}}" id="example-text-input">
                                     </div>
                                     <div class="form-group">
                                         <label for="example-text-input" class="form-control-label">Pinterest</label>
-                                        <input class="form-control" type="text" value="pinterest"
+                                        <input class="form-control" type="text" value="{{$settingsData->pinterest}}"
                                             id="example-text-input">
                                     </div>
 
 
 
-                                </form>
 
 
                             </div>
@@ -347,14 +338,12 @@
                         <div class="card-body pt-0">
 
 
-                            <form>
-
 
                                 <div class="form-group">
                                     <label for="exampleFormControlTextarea1">Analytic Kodu</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="6">{{$settingsData->google_analytic}}</textarea>
                                 </div>
-                            </form>
+
 
 
                         </div>
@@ -431,132 +420,14 @@
 
 
                 </div>
-
+                </form>
             </div>
 
 
 
-            <footer class="footer pt-3  ">
-                <div class="container-fluid">
-                    <div class="row align-items-center justify-content-lg-between">
-                        <div class="col-lg-6 mb-lg-0 mb-4">
-                            <div class="copyright text-center text-sm text-muted text-lg-start">
-                                © <script>
-                                    document.write(new Date().getFullYear())
-                                </script>,
-                                made with <i class="fa fa-heart"></i> by
-                                <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">Creative
-                                    Tim</a>
-                                for a better web.
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <ul class="nav nav-footer justify-content-center justify-content-lg-end">
-                                <li class="nav-item">
-                                    <a href="https://www.creative-tim.com" class="nav-link text-muted"
-                                        target="_blank">Creative Tim</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="https://www.creative-tim.com/presentation" class="nav-link text-muted"
-                                        target="_blank">About Us</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="https://www.creative-tim.com/blog" class="nav-link text-muted"
-                                        target="_blank">Blog</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted"
-                                        target="_blank">License</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </footer>
+
         </div>
     </main>
-    <div class="fixed-plugin">
-        <a class="fixed-plugin-button text-dark position-fixed px-3 py-2">
-            <i class="fa fa-cog py-2"> </i>
-        </a>
-        <div class="card shadow-lg ">
-            <div class="card-header pb-0 pt-3 ">
-                <div class="float-start">
-                    <h5 class="mt-3 mb-0">Soft UI Configurator</h5>
-                    <p>See our dashboard options.</p>
-                </div>
-                <div class="float-end mt-4">
-                    <button class="btn btn-link text-dark p-0 fixed-plugin-close-button">
-                        <i class="fa fa-close"></i>
-                    </button>
-                </div>
-                <!-- End Toggle Button -->
-            </div>
-            <hr class="horizontal dark my-1">
-            <div class="card-body pt-sm-3 pt-0">
-                <!-- Sidebar Backgrounds -->
-                <div>
-                    <h6 class="mb-0">Sidebar Colors</h6>
-                </div>
-                <a href="javascript:void(0)" class="switch-trigger background-color">
-                    <div class="badge-colors my-2 text-start">
-                        <span class="badge filter bg-gradient-primary active" data-color="primary"
-                            onclick="sidebarColor(this)"></span>
-                        <span class="badge filter bg-gradient-dark" data-color="dark"
-                            onclick="sidebarColor(this)"></span>
-                        <span class="badge filter bg-gradient-info" data-color="info"
-                            onclick="sidebarColor(this)"></span>
-                        <span class="badge filter bg-gradient-success" data-color="success"
-                            onclick="sidebarColor(this)"></span>
-                        <span class="badge filter bg-gradient-warning" data-color="warning"
-                            onclick="sidebarColor(this)"></span>
-                        <span class="badge filter bg-gradient-danger" data-color="danger"
-                            onclick="sidebarColor(this)"></span>
-                    </div>
-                </a>
-                <!-- Sidenav Type -->
-                <div class="mt-3">
-                    <h6 class="mb-0">Sidenav Type</h6>
-                    <p class="text-sm">Choose between 2 different sidenav types.</p>
-                </div>
-                <div class="d-flex">
-                    <button class="btn bg-gradient-primary w-100 px-3 mb-2 active" data-class="bg-transparent"
-                        onclick="sidebarType(this)">Transparent</button>
-                    <button class="btn bg-gradient-primary w-100 px-3 mb-2 ms-2" data-class="bg-white"
-                        onclick="sidebarType(this)">White</button>
-                </div>
-                <p class="text-sm d-xl-none d-block mt-2">You can change the sidenav type just on desktop view.</p>
-                <!-- Navbar Fixed -->
-                <div class="mt-3">
-                    <h6 class="mb-0">Navbar Fixed</h6>
-                </div>
-                <div class="form-check form-switch ps-0">
-                    <input class="form-check-input mt-1 ms-auto" type="checkbox" id="navbarFixed"
-                        onclick="navbarFixed(this)">
-                </div>
-                <hr class="horizontal dark my-sm-4">
-                <a class="btn bg-gradient-dark w-100" href="https://www.creative-tim.com/product/soft-ui-dashboard">Free
-                    Download</a>
-                <a class="btn btn-outline-dark w-100"
-                    href="https://www.creative-tim.com/learning-lab/bootstrap/license/soft-ui-dashboard">View
-                    documentation</a>
-                <div class="w-100 text-center">
-                    <a class="github-button" href="https://github.com/creativetimofficial/soft-ui-dashboard"
-                        data-icon="octicon-star" data-size="large" data-show-count="true"
-                        aria-label="Star creativetimofficial/soft-ui-dashboard on GitHub">Star</a>
-                    <h6 class="mt-3">Thank you for sharing!</h6>
-                    <a href="https://twitter.com/intent/tweet?text=Check%20Soft%20UI%20Dashboard%20made%20by%20%40CreativeTim%20%23webdesign%20%23dashboard%20%23bootstrap5&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fsoft-ui-dashboard"
-                        class="btn btn-dark mb-0 me-2" target="_blank">
-                        <i class="fab fa-twitter me-1" aria-hidden="true"></i> Tweet
-                    </a>
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/soft-ui-dashboard"
-                        class="btn btn-dark mb-0 me-2" target="_blank">
-                        <i class="fab fa-facebook-square me-1" aria-hidden="true"></i> Share
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
     <!--   Core JS Files   -->
     <script src="../assets/js/core/popper.min.js"></script>
     <script src="../assets/js/core/bootstrap.min.js"></script>

@@ -13,24 +13,13 @@ class SettingController extends Controller
     {
         $settings=Setting::first();
         if($settings==NULL||$settings==""){
-            $settingArr=array();
             $settingArr=[
-                'user_id'=>Auth::user()->id,
-                'facility_name'=>NULL,
-                'facility_slogon'=>NULL,
-                'title'=>NULL,
-                'site_url'=>NULL,
-                'address1'=>NULL,
-                'number'=>NULL,
-                'top_logo'=>NULL,
-                'bottom_logo'=>NULL,
-                'map'=>NULL,
-                'google_analytic'=>NULL
+                'user_id'=>Auth::user()->id
             ];
             Setting::create($settingArr);
         }
-        $settings=Setting::first();
-        return view('site.Settings',['settings'=>$settings]);
+        $settingsData=Setting::first();
+        return view('site.settings',['settingsData'=>$settingsData]);
     }
     public function update(Request $request)
     {

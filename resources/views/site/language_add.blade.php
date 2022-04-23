@@ -9,7 +9,7 @@
                             <h6>Diller</h6>
                         </div>
                         <div class="text-end col-md-6">
-                        <a href="languages-add.php"><button type="button" class="btn btn-primary btn-sm">Dil Ekle</button></a>
+
             <a href="language-constants.php"><button type="button" class="btn btn-secondary btn-sm">Dil Sabitleri</button></a>
                         </div>
                     </div>

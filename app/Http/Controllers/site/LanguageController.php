@@ -14,7 +14,15 @@ class LanguageController extends Controller
     public function index()
     {
         $languageData=Language::all();
-        return view('site/LanguageList',['languageData'=>$languageData]);
+        return view('site.languages',['languageData'=>$languageData]);
+    }
+    public function const_list()
+    {
+        return view('site.language_constants');
+    }
+    public function create()
+    {
+        return view('site.language_add');
     }
     public function addLanguage(Request $request)
     {

@@ -11,9 +11,9 @@ class GalleryController extends Controller
 {
     public function index()
     {
-        $languages=Language::all();
+        //$languages=Language::all();
         $gallery=Gallery::all();
-        return view('site/Gallery',['languages'=>$languages,'gallery'=>$gallery]);
+        return view('site.gallery',['gallery'=>$gallery]);
     }
     public function store(Request $request)
     {
