@@ -21,7 +21,7 @@ class SettingController extends Controller
         $settingsData=Setting::first();
         return view('site.settings',['settingsData'=>$settingsData]);
     }
-    public function update(Request $request)
+    public function ÜÜÜÜÜÜÜÜÜupdate(Request $request)
     {
         if($request->hasFile('top_logo')){
             $ext=$request->file('top_log')->getClientOriginalExtension();
@@ -40,6 +40,7 @@ class SettingController extends Controller
                 $bottom_logo=\Illuminate\Support\Str::random(50).$request->file('bottom_logo')->getClientOriginalName();
                 $request->file('bottom_logo')->move('storage',$bottom_logo);
             }else{
+
                 return redirect()->to(route('site/settings'))->with('status','invalid_extensions');
             }
         }else{
